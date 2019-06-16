@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 #link_to "students", students_path
 resources :students, only: [:index, :show]
 
-#active_students_path(@student)
+get "students/:id/activate", to: "students#activate", as: 'activate_student'
 
 end
